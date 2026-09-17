@@ -98,7 +98,7 @@ function SceneLighting() {
 
 export default function CareerJourneyScene({ activeId, onSelectMilestone }) {
   const containerRef = useRef(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current) return;

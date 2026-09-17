@@ -450,7 +450,9 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
     setIsDragging(false);
   }, []);
 
-  const [isInView, setIsInView] = useState<boolean>(false);
+  const [isInView, setIsInView] = useState<boolean>(true);
+  const updateMomentumRef = useRef(updateMomentum);
+  updateMomentumRef.current = updateMomentum;
 
   // ==========================================
   // EFFECTS & LIFECYCLE
@@ -466,32 +468,33 @@ const SphereImageGrid: React.FC<SphereImageGridProps> = ({
       ([entry]) => {
         setIsInView(entry.isIntersecting);
       },
-      { rootMargin: '100px' }
+      { rootMargin: '150px' }
     );
     observer.observe(containerRef.current);
     return () => observer.disconnect();
-  }, []);
+  }, [isMounted]);
 
   useEffect(() => {
     setImagePositions(generateSpherePositions());
   }, [generateSpherePositions]);
 
   useEffect(() => {
+    let animId: number;
     const animate = () => {
-      updateMomentum();
-      animationFrame.current = requestAnimationFrame(animate);
+      if (isInView) {
+        updateMomentumRef.current();
+      }
+      animId = requestAnimationFrame(animate);
     };
 
-    if (isMounted && isInView) {
-      animationFrame.current = requestAnimationFrame(animate);
+    if (isMounted) {
+      animId = requestAnimationFrame(animate);
     }
 
     return () => {
-      if (animationFrame.current) {
-        cancelAnimationFrame(animationFrame.current);
-      }
+      cancelAnimationFrame(animId);
     };
-  }, [isMounted, isInView, updateMomentum]);
+  }, [isMounted, isInView]);
 
   useEffect(() => {
     if (!isMounted) return;

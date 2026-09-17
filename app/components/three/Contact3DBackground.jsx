@@ -169,7 +169,7 @@ function BackgroundCameraRig() {
 
 export default function Contact3DBackground() {
   const containerRef = useRef(null);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
