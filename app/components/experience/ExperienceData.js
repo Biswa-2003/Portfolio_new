@@ -1,0 +1,83 @@
+export const EXPERIENCES = [
+  {
+    id: 'giet',
+    year: '2023',
+    dateBadge: 'Jan 2023 – Jun 2023',
+    role: 'Frontend Developer (Intern)',
+    company: 'ABC Tech',
+    location: 'Remote',
+    accent: '#38bdf8', // var(--teal)
+    glow: 'rgba(56, 189, 248, 0.45)',
+    pedestalColor: '#38bdf8',
+    coords: [-5.5, -1.2, 0.6],
+    curveT: 0.14,
+    skills: ['React.js', 'JavaScript', 'HTML5/CSS3', 'UI Engineering', 'REST APIs'],
+    points: [
+      'Engineered interactive responsive web interfaces using React.js and modern JavaScript standards.',
+      'Collaborated in agile sprint cycles to optimize client-side bundle load times and state rendering.',
+      'Constructed accessible UI modules adhering strictly to semantic design specs and component libraries.',
+      'Integrated RESTful endpoint payloads with real-time UI state sync and error boundary handlers.',
+    ],
+  },
+  {
+    id: 'tech-mahindra',
+    year: '2024',
+    dateBadge: 'Jul 2023 – Nov 2024',
+    role: 'Software Developer',
+    company: 'XYZ Solutions',
+    location: 'Bhubaneswar',
+    accent: '#3b82f6', // blue
+    glow: 'rgba(59, 130, 246, 0.45)',
+    pedestalColor: '#3b82f6',
+    coords: [0.0, -0.85, 0.4],
+    curveT: 0.31,
+    skills: ['React.js', 'Node.js', 'JavaScript', 'Tailwind CSS', 'Agile Architecture'],
+    points: [
+      'Served as Software Developer in enterprise agile engineering teams, managing core feature pipelines.',
+      'Developed and optimized React.js frontend interfaces, improving component rendering performance.',
+      'Collaborated with senior engineers to implement interactive UI elements and responsive layouts.',
+      'Participated in code reviews, CI/CD automated deployments, and enterprise version control practices.',
+    ],
+  },
+  {
+    id: 'triptales',
+    year: '2025',
+    dateBadge: 'Dec 2024 – Present',
+    role: 'Junior Software Developer',
+    company: 'Triptales Commercials Private Limited',
+    location: 'Bhubaneswar, India',
+    accent: '#a855f7', // purple
+    glow: 'rgba(168, 85, 247, 0.5)',
+    pedestalColor: '#a855f7',
+    coords: [5.5, -0.45, 0.1],
+    curveT: 0.48,
+    skills: ['Next.js', 'Express.js', 'PostgreSQL', 'RESTful APIs', 'JWT', 'Razorpay', 'CI/CD'],
+    points: [
+      'Architecting and scaling full-stack core application modules (Matrimony, Property, Jobs) for high user volume.',
+      'Hardening authentication infrastructure with secure HTTP-only JWT handling and OTP verification workflows.',
+      'Designing high-performance PostgreSQL database schemas, utilizing JSONB columns and B-tree index strategies.',
+      'Developing robust, RESTful Node.js / Express.js API layers to serve optimized data to Next.js clients.',
+      'Integrating Razorpay payment gateways for encrypted, end-to-end secure transactions.',
+    ],
+  },
+];
+
+export const SUMMIT_MILESTONE = {
+  id: 'summit',
+  year: '2025 & Beyond',
+  dateBadge: 'Active Frontier · 2025+',
+  role: 'Scalable Systems & AI Engineering',
+  company: 'Engineering Horizon & Architecture',
+  location: 'Global / Remote / Distributed',
+  accent: '#06b6d4',
+  glow: 'rgba(6, 182, 212, 0.55)',
+  pedestalColor: '#06b6d4',
+  coords: [7.2, 3.4, -4.5],
+  skills: ['Distributed Systems', 'Applied AI / LLMs', 'Cloud Native', 'Microservices', 'System Design'],
+  points: [
+    'Deepening expertise in distributed systems architecture, event-driven streaming, and low-latency microservices.',
+    'Integrating AI agent workflows, vector embeddings, and multimodal models into production SaaS platforms.',
+    'Contributing to open-source developer tooling and high-throughput backend infrastructure.',
+    'Architecting resilient cloud-native systems with container orchestration, automated CI/CD pipelines, and observability.',
+  ],
+};
